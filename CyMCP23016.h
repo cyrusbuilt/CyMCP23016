@@ -1,6 +1,6 @@
 /**
  * CyMCP23016.h
- * Version 1.0.0
+ * Version 1.0.1
  * Author:
  *  Chris (Cyrus) Brunner
  * 
@@ -135,6 +135,12 @@ public:
      * @returns The pin value (HIGH or LOW).
      */
     uint8_t digitalRead(uint8_t pin);
+
+    /**
+     * Attempts to detect the I2C device at the default or specified address.
+     * @returns true if the device was detected; Otherwise, false.
+     */
+    bool detected();
 private:
     /**
      * Gets the bit number associated with a given pin.

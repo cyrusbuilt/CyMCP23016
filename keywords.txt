@@ -19,6 +19,7 @@ readAllPinsForPort  KEYWORD2
 writeAllPins    KEYWORD2
 digitalWrite    KEYWORD2
 digitalRead KEYWORD2
+detected    KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

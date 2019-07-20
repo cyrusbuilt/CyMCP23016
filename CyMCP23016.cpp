@@ -1,6 +1,6 @@
 /**
  * CyMCP23016.cpp
- * Version 1.0.0
+ * Version 1.0.1
  * Author:
  *  Chris (Cyrus) Brunner
  * 
@@ -131,4 +131,9 @@ uint8_t CyMCP23016::digitalRead(uint8_t pin) {
     uint8_t bit = this->bitForPin(pin);
     uint8_t regAddr = this->regForPin(pin, MCP23016_GPIO0, MCP23016_GPIO1);
     return (this->readRegister(regAddr) >> bit) & 0x1;
+}
+
+bool CyMCP23016::detected() {
+    Wire.beginTransmission(MCP23016_ADDRESS | this->_i2cAddr);
+    return (Wire.endTransmission() == 0);
 }
