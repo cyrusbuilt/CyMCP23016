@@ -11,6 +11,7 @@ cache:
 install:
   - pip install -U platformio
   - pio update
+  - pio lib -g update
 
 before_script:
   - env
