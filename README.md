@@ -33,7 +33,7 @@ void loop() {
     // Turn the LED on, then read back the state to verify.
     mcp.digitalWrite(LED_PIN, HIGH);
     uint8_t state = mcp.digitalRead(LED_PIN);
-    Serial.print(F("LED is ));
+    Serial.print(F("LED is "));
     Serial.println(state == HIGH ? "ON", "OFF");
 
     delay(1000);
@@ -41,7 +41,7 @@ void loop() {
     // Turn the LED off, then
     mcp.digitalWrite(LED_PIN, LOW);
     state == mcp.digitalRead(LED_PIN);
-    Serial.print(F("LED is ));
+    Serial.print(F("LED is "));
     Serial.println(state == HIGH ? "ON" : "OFF");
 }
 ```
